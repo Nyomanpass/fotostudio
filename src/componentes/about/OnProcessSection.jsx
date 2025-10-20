@@ -52,7 +52,7 @@ const OurProcessSection = () => {
                         <ProcessCard 
                             key={index}
                             step={item.step}
-                            Icon={item.icon}
+                            icon={item.icon}
                             title={item.title}
                             description={item.description}
                         />
@@ -65,7 +65,8 @@ const OurProcessSection = () => {
 };
 
 // Komponen Kartu Proses
-const ProcessCard = ({ step, Icon, title, description }) => {
+const ProcessCard = ({ step, icon, title, description }) => {
+    const Icon = icon;
     return (
         <div className="flex flex-col items-center text-center p-6 border border-gray-100 rounded-xl bg-gray-50 shadow-sm hover:shadow-lg transition duration-300">
             

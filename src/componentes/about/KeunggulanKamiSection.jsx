@@ -44,7 +44,7 @@ const KeunggulanKamiSection = () => {
                     {keunggulanData.map((item, index) => (
                         <KeunggulanCard 
                             key={index}
-                            Icon={item.icon}
+                            icon={item.icon}
                             title={item.title}
                             description={item.description}
                         />
@@ -57,13 +57,14 @@ const KeunggulanKamiSection = () => {
 };
 
 // Komponen Kartu Keunggulan
-const KeunggulanCard = ({ Icon, title, description }) => {
+const KeunggulanCard = ({ icon, title, description }) => {
+    const Icon = icon;
     return (
         <div className="flex flex-col items-center text-center">
             
             {/* Ikon dengan Latar Belakang Gelap dan Aksen Emas */}
             <div className="p-5 mb-6 rounded-full bg-gray-800 border-2 border-yellow-700 shadow-xl transition duration-300 hover:bg-gray-700">
-                <Icon className="w-8 h-8 text-yellow-500" />
+                {Icon ? <Icon className="w-8 h-8 text-yellow-500" /> : null}
             </div>
 
             {/* Judul */}

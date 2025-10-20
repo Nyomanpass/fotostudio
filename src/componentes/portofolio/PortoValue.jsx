@@ -177,7 +177,7 @@ const PortfolioCard = ({ image, title, category, onClick }) => {
             </div>
             
             {/* Ikon View/Detail */}
-            <div className="absolute top-4 right-4 p-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition duration-300">
+            <div className="absolute top-4 right-4 p-2 bg-gray-800 bg-opacity-20 backdrop-blur-sm rounded-full opacity-0 group-hover:opacity-100 transition duration-300">
                 <ArrowRight className="w-5 h-5 text-white" />
             </div>
 
@@ -197,7 +197,7 @@ const LightboxModal = ({ imageUrl, onClose }) => {
             
             {/* Tombol Tutup */}
             <button
-                className="absolute top-6 right-6 p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-40 transition duration-300 z-50"
+                className="absolute top-6 right-6 p-3 rounded-full bg-gray-800 bg-opacity-20 hover:bg-opacity-40 transition duration-300 z-50"
                 onClick={onClose}
             >
                 <X className="w-6 h-6 text-white" />

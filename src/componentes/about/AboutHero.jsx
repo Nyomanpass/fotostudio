@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowDown } from 'lucide-react'; 
 
 const statsData = [
@@ -12,13 +12,96 @@ const statsData = [
 const AboutHero = () => {
     // Scroll function untuk meniru "SCROLL DOWN TO SEE MY JOURNEY"
     const handleScrollToBio = () => {
-        document.getElementById('biography-section').scrollIntoView({ behavior: 'smooth' });
+        const el = document.getElementById('biography-section');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
     };
+
+    // Count-up animation
+    const containerRef = useRef(null);
+    const animatedRef = useRef(false);
+    const rafIdsRef = useRef([]);
+    const [displayed, setDisplayed] = useState(statsData.map(() => '0'));
+
+    useEffect(() => {
+        const duration = 1200; // ms per item
+        const stagger = 120; // ms delay between items
+
+        const easeOutQuad = (t) => 1 - (1 - t) * (1 - t);
+
+        const parseNumberAndSuffix = (str) => {
+            const m = str.match(/(\d+(\.\d+)?)/);
+            const num = m ? Number(m[0]) : 0;
+            const suffix = str.replace(m ? m[0] : '', '');
+            return { num, suffix };
+        };
+
+        const animateValue = (index, from, to, suffix, startDelay = 0) => {
+            let startTime = null;
+            const step = (timestamp) => {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+                const t = Math.min(1, elapsed / duration);
+                const eased = easeOutQuad(t);
+                const current = Math.floor(from + (to - from) * eased);
+                setDisplayed(prev => {
+                    const next = [...prev];
+                    next[index] = `${current}${suffix}`;
+                    return next;
+                });
+                if (t < 1) {
+                    rafIdsRef.current[index] = requestAnimationFrame(step);
+                } else {
+                    setDisplayed(prev => {
+                        const next = [...prev];
+                        next[index] = statsData[index].value; // final exact string
+                        return next;
+                    });
+                }
+            };
+
+            // start after delay to create stagger
+            const timer = setTimeout(() => {
+                rafIdsRef.current[index] = requestAnimationFrame(step);
+            }, startDelay);
+
+            // store timer id so we can cleanup if needed
+            rafIdsRef.current[index] = { timerId: timer, rafId: rafIdsRef.current[index] };
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !animatedRef.current) {
+                    animatedRef.current = true;
+                    statsData.forEach((stat, i) => {
+                        const { num, suffix } = parseNumberAndSuffix(stat.value);
+                        animateValue(i, 0, num, suffix, i * stagger);
+                    });
+                }
+            });
+        }, { threshold: 0.25 });
+
+        if (containerRef.current) observer.observe(containerRef.current);
+
+        return () => {
+            observer.disconnect();
+            // cleanup any pending rafs/timeouts
+            rafIdsRef.current.forEach((item) => {
+                if (item == null) return;
+                if (typeof item === 'object') {
+                    if (item.timerId) clearTimeout(item.timerId);
+                    if (item.rafId) cancelAnimationFrame(item.rafId);
+                } else {
+                    cancelAnimationFrame(item);
+                }
+            });
+            rafIdsRef.current = [];
+        };
+    }, []);
 
     return (
         // Latar belakang Putih, Teks Hitam
         <section className="bg-white text-gray-900 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto text-center">
                 
                 {/* 1. HEADER & JUDUL UTAMA */}
                 <div className="mb-12 md:mb-16 mt-10">
@@ -28,17 +111,16 @@ const AboutHero = () => {
                     </h1>
                 </div>
 
-                {/* 2. STATISTIK (Kotak Hitam di Atas Latar Putih) */}
-                <div className="flex flex-wrap justify-start gap-4 md:gap-8 mb-16 md:mb-24">
+                {/* 2. STATISTIK (kotak kini center) */}
+                <div ref={containerRef} className="flex flex-wrap justify-center gap-4 md:gap-8 mb-16 md:mb-24">
                     {statsData.map((stat, index) => (
                         <div 
                             key={index} 
-                            // Mempertahankan desain kotak gelap dari referensi, tetapi dengan border dan shadow di atas latar putih
                             className="p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-md flex-shrink-0"
                             style={{ minWidth: '150px' }}
                         >
                             <p className="text-3xl md:text-4xl font-light text-gray-900 mb-1">
-                                {stat.value}
+                                {displayed[index]}
                             </p>
                             <p className="text-sm font-light text-gray-600">
                                 {stat.label}
@@ -48,7 +130,7 @@ const AboutHero = () => {
                 </div>
 
                 {/* 3. FOTO PROFIL & SCROLL HINT */}
-                <div className="relative mb-20 md:mb-32">
+                <div className="relative mb-2 md:mb-2">
                     {/* Kotak Abu-abu Besar di Kanan Atas (Placeholder untuk gambar header) */}
                     <div className="absolute top-0 right-0 w-1/2 h-32 bg-gray-200 rounded-tl-lg rounded-br-lg hidden lg:block"></div>
 
