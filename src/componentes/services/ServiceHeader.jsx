@@ -9,7 +9,7 @@ const ServiceHeader = () => {
             {/* Gambar Latar Belakang (dengan Opacity/Overlay) */}
             <div className="absolute inset-0">
                 <img
-                    src="/headerdua.jpg" // Ganti dengan path gambar hero services Anda
+                    src="/porto/porto19.jpg" // Ganti dengan path gambar hero services Anda
                     alt="Layanan Fotografi Doni Studio"
                     className="w-full h-full object-cover"
                 />

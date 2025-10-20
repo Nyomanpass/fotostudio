@@ -38,10 +38,10 @@ const Footer = () => {
                             Discover
                         </h4>
                         <ul className="space-y-2 text-sm font-light">
-                            <li><a href="#about" className="hover:text-white transition">About Us</a></li>
-                            <li><a href="#services" className="hover:text-white transition">Our Services</a></li>
-                            <li><a href="#portfolio" className="hover:text-white transition">Portfolio</a></li>
-                            <li><a href="#faq" className="hover:text-white transition">FAQ</a></li>
+                            <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+                            <li><a href="/services" className="hover:text-white transition">Our Services</a></li>
+                            <li><a href="/portofolio" className="hover:text-white transition">Portfolio</a></li>
+                            <li><a href="/#faq" className="hover:text-white transition">FAQ</a></li>
                         </ul>
                     </div>
                     
@@ -69,13 +69,7 @@ const Footer = () => {
                             </a>
                             <a href="https://facebook.com/donistudio" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition">
                                 <Facebook size={20} />
-                            </a>
-                            <a href="https://twitter.com/donistudio" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition">
-                                <Twitter size={20} />
-                            </a>
-                            <a href="https://linkedin.com/company/donistudio" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-700 transition">
-                                <Linkedin size={20} />
-                            </a>
+                            </a>    
                         </div>
                     </div>
 

@@ -4,10 +4,10 @@ import { Instagram, Facebook, Twitter, Linkedin } from 'lucide-react'; // Untuk 
 
 const AboutSection = () => {
     // Ganti dengan path foto profil Doni Studio atau perwakilan
-    const PROFILE_IMAGE = '/headertiga.jpg'; 
+    const PROFILE_IMAGE = '/porto/porto2.jpg'; 
 
     return (
-        <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section id="about" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section (Sesuai gaya gambar) */}
@@ -21,7 +21,7 @@ const AboutSection = () => {
                     
                     {/* Tombol Know More */}
                     <a 
-                        href="#detail-about" // Ganti dengan link detail halaman about
+                        href="/about"
                         className="flex items-center space-x-2 bg-gray-900 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
                     >
                         <span>Know More</span>
@@ -81,7 +81,13 @@ const AboutSection = () => {
                             
                             {/* Tombol Call to Action & Sosial Media */}
                             <div className="mt-8 flex flex-col sm:flex-row items-center sm:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
-                                <button className="bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition duration-300 w-full sm:w-auto">
+                                <button
+                                    onClick={() => {
+                                        const el = document.getElementById('cta-section');
+                                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }}
+                                    className="bg-gray-900 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition duration-300 w-full sm:w-auto"
+                                >
                                     Let's Work
                                 </button>
                                 <button className="border border-gray-300 text-gray-900 px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition duration-300 w-full sm:w-auto">
@@ -92,7 +98,6 @@ const AboutSection = () => {
                                 <div className="flex space-x-3 mt-4 sm:mt-0">
                                     <a href="#" className="p-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition"><Instagram size={16}/></a>
                                     <a href="#" className="p-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition"><Facebook size={16}/></a>
-                                    <a href="#" className="p-2 border border-gray-300 rounded-full text-gray-700 hover:bg-gray-100 transition"><Linkedin size={16}/></a>
                                 </div>
                             </div>
                         </div>

@@ -62,7 +62,6 @@ function Navbar() {
           <div className="flex items-center space-x-3">
             <a href="#" className="hover:text-white"><Instagram size={16}/></a>
             <a href="#" className="hover:text-white"><Facebook size={16}/></a>
-            <a href="#" className="hover:text-white"><Twitter size={16}/></a>
           </div>
         </div>
         {/* AKHIR TOP BAR */}
@@ -87,7 +86,7 @@ function Navbar() {
                 <React.Fragment key={link.name}>
                   {/* Logo muncul di tengah */}
                   {index === 3 && (
-                    <a href="#" className="text-xl font-serif px-14 tracking-widest text-gray-800 mx-4 text-center">
+                    <a href="/" className="text-xl font-serif px-14 tracking-widest text-gray-800 mx-4 text-center">
                       DONY
                       <span className="block text-xs font-sans tracking-normal text-gray-500">
                         BE PRO EXPERTS

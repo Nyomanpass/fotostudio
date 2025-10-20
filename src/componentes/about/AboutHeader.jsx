@@ -8,7 +8,7 @@ const AboutHeader = () => {
             {/* Gambar Latar Belakang (Contoh: Tim sedang bekerja atau foto studio) */}
             <div className="absolute inset-0">
                 <img
-                    src="/headerdua.jpg" // Ganti dengan path gambar hero About Anda
+                    src="/porto/porto24.jpg" // Ganti dengan path gambar hero About Anda
                     alt="Tim Doni Studio Bekerja"
                     className="w-full h-full object-cover"
                 />

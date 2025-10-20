@@ -12,33 +12,33 @@ import Footer from '../componentes/Footer';
 const slidesData = [
     {
         id: 1,
-        image: '/fotostudio.jpg', // Ganti dengan path gambar pertama Anda
+        image: '/porto/porto37.jpg', // Ganti dengan path gambar pertama Anda
         pTitle: 'PLAYBACK VIDEOS',
         hTitle: 'BUSINESS TALK WITH HIERØS',
         subText: 'Intimate Sharing Session w/ Hieros Photography (Zoom Record)',
         // Tambahan deskripsi Anda
         descServices: 'Wedding • Prewedding • Event • Product Shoot • Video Editing',
-        descStats: '📸 Lebih dari 500+ momen sudah kami dokumentasikan dengan penuh rasa dan detail.'
+        descStats: 'Lebih dari 500+ momen sudah kami dokumentasikan dengan penuh rasa dan detail.'
     },
     {
         id: 2,
-        image: '/headerdua.jpg', // Ganti dengan path gambar kedua Anda
+        image: '/porto/porto19.jpg', // Ganti dengan path gambar kedua Anda
         pTitle: 'PRE-WEDDING & WEDDING',
         hTitle: 'CINTA ABADI DALAM FOTO',
         subText: 'Jadikan momen sekali seumur hidup tak terlupakan.',
         // Tambahan deskripsi Anda
         descServices: 'Outdoor • Indoor • Cinematic Video',
-        descStats: '💍 Ratusan pasangan bahagia telah memilih kami.'
+        descStats: 'Ratusan pasangan bahagia telah memilih kami.'
     },
     {
         id: 3,
-        image: '/headertiga.jpg', // Ganti dengan path gambar ketiga Anda
+        image: '/porto/porto38.jpg', // Ganti dengan path gambar ketiga Anda
         pTitle: 'PRODUCT & COMMERCIAL',
         hTitle: 'TINGKATKAN BRAND VALUE',
         subText: 'Foto produk berkualitas untuk penjualan yang lebih tinggi.',
         // Tambahan deskripsi Anda
         descServices: 'Catalog • E-commerce • Food & Beverages',
-        descStats: '📈 Klien bisnis besar dan UMKM telah merasakan dampaknya.'
+        descStats: 'Klien bisnis besar dan UMKM telah merasakan dampaknya.'
     }
 ];
 
@@ -113,13 +113,13 @@ function Home(){
                         {/* Tombol Call-to-Action */}
                         <div className="flex flex-wrap justify-center space-x-3 sm:space-x-6">
                             <a
-                                href="#portofolio" 
+                                href="/portofolio" 
                                 className="bg-white text-gray-800 text-sm font-semibold py-2 px-6 rounded-md shadow-md hover:bg-gray-200 transition duration-300 tracking-wider mb-2"
                             >
                                 Lihat Portofolio
                             </a>
                             <a
-                                href="https://wa.me/yourphonenumber" 
+                                href="https://wa.me/081234567890" // Ganti dengan nomor WhatsApp Anda
                                 className="border border-white text-white text-sm font-semibold py-2 px-6 rounded-md shadow-md hover:bg-white hover:text-gray-800 transition duration-300 tracking-wider mb-2"
                             >
                                 Chat Konsultasi

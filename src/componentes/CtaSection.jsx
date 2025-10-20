@@ -5,7 +5,7 @@ import { ArrowRight, Mail, Phone, Instagram, Facebook } from 'lucide-react';
 const CtaSection = () => {
     return (
         // Latar belakang Putih, Teks Hitam
-        <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section id="cta-section" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
                 
                 {/* Sub Judul/Pemanis */}

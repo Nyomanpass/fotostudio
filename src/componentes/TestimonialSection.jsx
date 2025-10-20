@@ -43,7 +43,7 @@ const TestimonialSection = () => {
                     {/* Navigasi Carousel & View All */}
                     <div className="flex items-center space-x-4 mt-8 sm:mt-0">
                         <a 
-                            href="/testimonials-page" 
+                            href="/testimonials" 
                             className="flex items-center space-x-2 bg-gray-800 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
                         >
                             <span>View All Testimonials</span>

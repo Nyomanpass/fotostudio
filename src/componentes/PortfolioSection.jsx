@@ -6,37 +6,37 @@ const portfolioData = [
     {
         title: "Faces of Resilience",
         date: "March 2024",
-        image: "/portfolio-image-1.jpg", 
+        image: "/porto/porto1.jpg", 
         link: "#project-1"
     },
     {
         title: "A Wedding Tale",
         date: "January 2024",
-        image: "/portfolio-image-2.jpg",
-        link: "#project-2"
+        image: "/porto/porto2.jpg",
+        link: "#project-7"
     },
     {
         title: "Product Elegance",
         date: "November 2023",
-        image: "/portfolio-image-3.jpg",
+        image: "/porto/porto3.jpg",
         link: "#project-3"
     },
      {
         title: "Corporate Event",
         date: "October 2023",
-        image: "/portfolio-image-4.jpg",
+        image: "/porto/porto4.jpg",
         link: "#project-4"
     },
     {
         title: "Street Style",
         date: "September 2023",
-        image: "/portfolio-image-5.jpg",
+        image: "/porto/porto5.jpg",
         link: "#project-5"
     },
     {
         title: "Food & Beverage",
         date: "August 2023",
-        image: "/portfolio-image-6.jpg",
+        image: "/porto/porto6.jpg",
         link: "#project-6"
     },
 ];
@@ -79,7 +79,7 @@ const PortfolioSection = () => {
     const displayedItems = portfolioData.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     return (
-        <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section id="portfolio" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section */}
@@ -113,7 +113,7 @@ const PortfolioSection = () => {
                         
                         {/* Tombol View All Works (Hitam Solid) */}
                         <a 
-                            href="/portfolio-page" 
+                            href="/portfolio" 
                             className="flex items-center space-x-2 bg-gray-900 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
                         >
                             <span>View All Works</span>

@@ -41,7 +41,7 @@ const FaqSection = () => {
 
     return (
         // Latar belakang Putih, Teks Hitam/Abu-abu Gelap
-        <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section id="faq" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section (Gaya Font Tipis) */}

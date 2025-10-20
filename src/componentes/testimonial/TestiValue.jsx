@@ -9,7 +9,7 @@ const testimonialsData = [
         name: "Amanda & Rizky",
         service: "Prewedding Photoshoot",
         rating: 5,
-        avatar: "/avatars/amanda.jpg" // Ganti dengan path foto klien
+        avatar: "/avatars/avatars1.jpg" // Ganti dengan path foto klien
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ const testimonialsData = [
         name: "Sarah & Bima",
         service: "Wedding Videography",
         rating: 5,
-        avatar: "/avatars/sarah.jpg"
+        avatar: "/avatars/avatars3.jpg"
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ const testimonialsData = [
         name: "Marketing Manager, PT Jaya Abadi",
         service: "Product Photography",
         rating: 4,
-        avatar: "/avatars/manager.jpg"
+        avatar: "/avatars/avatars5.jpg"
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const testimonialsData = [
         name: "Rudi Santoso",
         service: "Corporate Event Coverage",
         rating: 5,
-        avatar: "/avatars/rudi.jpg"
+        avatar: "/avatars/avatars6.jpg"
     },
     {
         id: 5,
@@ -41,7 +41,7 @@ const testimonialsData = [
         name: "Dinda Pratama",
         service: "Engagement Photoshoot",
         rating: 5,
-        avatar: "/avatars/dinda.jpg"
+        avatar: "/avatars/avatars2.jpg"
     },
     {
         id: 6,
@@ -49,7 +49,7 @@ const testimonialsData = [
         name: "Keluarga Handoko",
         service: "Video Editing",
         rating: 5,
-        avatar: "/avatars/handoko.jpg"
+        avatar: "/avatars/avatars4.jpg"
     },
 ];
 

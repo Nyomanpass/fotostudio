@@ -14,7 +14,7 @@ const servicesData = [
             "Pengiriman hasil cepat untuk momen penting."
         ],
         // Ganti dengan URL gambar yang relevan untuk layanan ini
-        image: '/fotostudio.jpg', 
+        image: '/porto/porto33.jpg', 
     },
     {
         icon: Camera,
@@ -26,7 +26,7 @@ const servicesData = [
             "Tim profesional yang mengarahkan pose.",
             "Hasil foto beresolusi tinggi siap cetak."
         ],
-        image: '/fotostudio.jpg', 
+        image: '/porto/porto20.jpg', 
     },
     {
         icon: Video,
@@ -38,7 +38,7 @@ const servicesData = [
             "Sound recording berkualitas tinggi.",
             "Durasi video custom sesuai permintaan."
         ],
-        image: '/fotostudio.jpg', 
+        image: '/porto/porto34.jpg', 
     },
     {
         icon: Briefcase,
@@ -50,7 +50,7 @@ const servicesData = [
             "Hasil dokumentasi siap publikasi.",
             "Turnaround cepat untuk highlights hari itu."
         ],
-        image: '/fotostudio.jpg', 
+        image: '/porto/porto36.jpg', 
     },
     {
         icon: Box,
@@ -62,7 +62,7 @@ const servicesData = [
             "Foto 360 derajat (opsional).",
             "Lisensi penggunaan komersial penuh."
         ],
-        image: '/fotostudio.jpg', 
+        image: '/porto/porto38.jpg', 
     },
     {
         icon: PenTool,
@@ -74,7 +74,7 @@ const servicesData = [
             "Penambahan musik dan sound effect.",
             "Revisi tak terbatas sampai puas (syarat & ketentuan berlaku)."
         ],
-       image: '/fotostudio.jpg', 
+       image: '/porto/porto37.jpg', 
     },
 ];
 
@@ -96,7 +96,7 @@ const ServiceDetailSection = () => {
 
     return (
         // Latar belakang gelap (Dark Mode)
-        <section className="bg-gray-900 py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-white">
+        <section id="services" className="bg-gray-900 py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-white">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section (Mirip Desain Gambar) */}
@@ -128,7 +128,7 @@ const ServiceDetailSection = () => {
                         
                         {/* Tombol View All Services */}
                         <a 
-                            href="#all-services" 
+                            href="/services" 
                             className="flex items-center space-x-2 bg-gray-800 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
                         >
                             <span>View All Services</span>

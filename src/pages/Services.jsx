@@ -20,7 +20,7 @@ const servicesData = [
             "Konsultasi konsep foto sebelum hari-H.",
             "Pengiriman hasil cepat untuk momen penting."
         ],
-        image: '/wedding-service-image.jpg', 
+        image: '/porto/porto33.jpg', 
     },
     {
         icon: Camera,
@@ -32,7 +32,7 @@ const servicesData = [
             "Tim profesional yang mengarahkan pose.",
             "Hasil foto beresolusi tinggi siap cetak."
         ],
-        image: '/prewedding-service-image.jpg', 
+        image: '/porto/porto20.jpg', 
     },
     {
         icon: Video,
@@ -44,7 +44,7 @@ const servicesData = [
             "Sound recording berkualitas tinggi.",
             "Durasi video custom sesuai permintaan."
         ],
-        image: '/engagement-service-image.jpg', 
+        image: '/porto/porto34.jpg', 
     },
      {
         icon: Briefcase,
@@ -56,7 +56,7 @@ const servicesData = [
             "Hasil dokumentasi siap publikasi.",
             "Turnaround cepat untuk highlights hari itu."
         ],
-        image: '/event-service-image.jpg', 
+        image: '/porto/porto36.jpg', 
     },
     {
         icon: Box,
@@ -68,7 +68,7 @@ const servicesData = [
             "Foto 360 derajat (opsional).",
             "Lisensi penggunaan komersial penuh."
         ],
-        image: '/product-service-image.jpg', 
+        image: '/porto/porto38.jpg', 
     },
     {
         icon: PenTool,
@@ -80,7 +80,7 @@ const servicesData = [
             "Penambahan musik dan sound effect.",
             "Revisi tak terbatas sampai puas (syarat & ketentuan berlaku)."
         ],
-       image: '/editing-service-image.jpg', 
+       image: '/porto/porto37.jpg', 
     },
 ];
 
@@ -149,12 +149,14 @@ const Services = () => {
 
                             {/* Tombol CTA di Bawah Detail */}
                              <a 
-                                href="#contact-booking" 
-                                className="inline-flex items-center space-x-2 mt-8 bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition duration-300 text-base font-medium shadow-xl"
-                            >
-                                <span>Get Pricelist & Book Now</span>
-                                <ArrowRight size={18} />
-                            </a>
+                                href={`https://wa.me/6281234567890?text=${encodeURIComponent(`Halo, saya tertarik dengan paket ${activeService.title}. Bisa kirimkan detail & pricelist?`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                 className="inline-flex items-center space-x-2 mt-8 bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition duration-300 text-base font-medium shadow-xl"
+                             >
+                                 <span>Get Pricelist & Book Now</span>
+                                 <ArrowRight size={18} />
+                             </a>
                         </div>
                         
                         {/* Kolom Kanan: Gambar Layanan Aktif */}
@@ -182,7 +184,7 @@ const Services = () => {
                         {servicesData.map((service, index) => (
                             <ServiceGridCard 
                                 key={index}
-                                Icon={service.icon}
+                                icon={service.icon}
                                 title={service.title}
                                 description={service.description}
                             />
@@ -201,7 +203,7 @@ const Services = () => {
                         Jika layanan di atas belum sesuai dengan kebutuhan spesifik Anda, jangan ragu untuk berdiskusi dengan kami.
                     </p>
                     <a 
-                        href="#contact-us" 
+                        href="/contact" 
                         className="inline-flex items-center space-x-3 bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 text-base font-medium shadow-xl"
                     >
                         <span>Mulai Konsultasi Gratis</span>
@@ -217,11 +219,12 @@ const Services = () => {
 };
 
 // Komponen Kartu Grid Layanan
-const ServiceGridCard = ({ Icon, title, description }) => {
+const ServiceGridCard = ({ icon, title, description }) => {
+    const Icon = icon;
     return (
         <div className="p-6 border border-gray-200 rounded-xl bg-white shadow-lg transition duration-300 hover:shadow-xl hover:border-gray-300">
             <div className="flex items-center space-x-3 mb-4">
-                <Icon className="w-6 h-6 text-gray-900" />
+                {Icon ? <Icon className="w-6 h-6 text-gray-900" /> : <span className="w-6 h-6 inline-block" />}
                 <h4 className="text-xl font-normal text-gray-900">
                     {title}
                 </h4>

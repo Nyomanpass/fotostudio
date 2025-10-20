@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import { ArrowRight, X } from 'lucide-react'; // Import ikon X untuk tombol tutup modal
+import { ArrowRight, X } from 'lucide-react'; 
 import { Camera, Calendar } from 'lucide-react';
 import Footer from '../Footer';
 
 // Data Dummy Portofolio (Data tidak berubah)
 const portfolioData = [
     { id: 1, title: "Prewedding, Amanda & Rizky", category: "Prewedding", image: "/headertiga.jpg" },
-    { id: 2, title: "Wedding, Sarah & Bima", category: "Wedding", image: "/porto/wedding1.jpg" },
-    { id: 3, title: "Product Elegance", category: "Product", image: "/porto/product1.jpg" },
-    { id: 4, title: "Annual Corporate Gala", category: "Event", image: "/porto/event1.jpg" },
-    { id: 5, title: "Prewedding, Di Pantai", category: "Prewedding", image: "/porto/prewed2.jpg" },
-    { id: 6, title: "Akad Nikah Intimate", category: "Wedding", image: "/porto/wedding2.jpg" },
-    { id: 7, title: "Produk Skincare", category: "Product", image: "/porto/product2.jpg" },
-    { id: 8, title: "Birthday Party 25th", category: "Event", image: "/porto/event2.jpg" },
+    { id: 2, title: "Wedding, Sarah & Bima", category: "Wedding", image: "/porto/porto1.jpg" },
+    { id: 3, title: "Product Elegance", category: "Product", image: "/porto/porto2.jpg" },
+    { id: 4, title: "Annual Corporate Gala", category: "Event", image: "/porto/porto3.jpg" },
+    { id: 5, title: "Prewedding, Di Pantai", category: "Prewedding", image: "/porto/porto4.jpg" },
+    { id: 6, title: "Akad Nikah Intimate", category: "Wedding", image: "/porto/porto6.jpg" },
+    { id: 7, title: "Produk Skincare", category: "Product", image: "/porto/porto7.jpg" },
+    { id: 8, title: "Birthday Party 25th", category: "Event", image: "/porto/porto8.jpg" },
+    { id: 9, title: "Prewedding, Bagus & Desak", category: "Prewedding", image: "/porto/porto9.jpg" },
 ];
 
 const categories = ["Semua", "Wedding", "Prewedding", "Engagement", "Event", "Product"];
