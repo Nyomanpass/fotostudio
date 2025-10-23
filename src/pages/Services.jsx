@@ -94,7 +94,7 @@ const Services = () => {
             <ServiceHeader /> 
 
             {/* Bagian 2: Detail Layanan Interaktif (LATAR BELAKANG PUTIH) */}
-            <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-gray-900">
+            <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-36 text-gray-900">
                 <div className="max-w-7xl mx-auto">
                     
                     {/* Judul Sub-Section */}
@@ -110,8 +110,8 @@ const Services = () => {
                                 onClick={() => setActiveIndex(index)}
                                 className={`px-6 py-3 rounded-lg text-base font-normal transition duration-300 shadow-md ${
                                     index === activeIndex 
-                                    ? 'bg-gray-900 text-white' // Highlight Hitam
-                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200' // Teks Abu-abu
+                                    ? 'bg-gray-800 text-white' // Highlight Hitam
+                                    : 'bg-gray-200 text-gray-800 hover:bg-gray-200' // Teks Abu-abu
                                 }`}
                             >
                                 {service.title}
@@ -174,7 +174,7 @@ const Services = () => {
             </section>
             
             {/* Bagian 3: Section Ringkasan Semua Layanan (Melengkapi Halaman) */}
-            <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-gray-900 border-t border-gray-100">
+            <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-36 text-gray-900 border-t border-gray-100">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-4xl font-light text-center mb-12">
                         Seluruh Layanan DoniStudio
@@ -194,24 +194,23 @@ const Services = () => {
             </section>
             
             {/* Bagian 4: Final CTA (Ajakan Penutup) */}
-            <section className="bg-gray-900 py-16 md:py-20 px-4 sm:px-6 lg:px-8 text-white">
+            <section className="bg-gray-400 py-16 md:py-20 px-4 sm:px-6 lg:px-8 text-white">
                 <div className="max-w-4xl mx-auto text-center">
                     <h3 className="text-4xl md:text-5xl font-light mb-6">
                         Punya Proyek Unik?
                     </h3>
-                    <p className="text-lg font-light text-gray-400 mb-8">
+                    <p className="text-lg font-light text-white mb-8 px-10">
                         Jika layanan di atas belum sesuai dengan kebutuhan spesifik Anda, jangan ragu untuk berdiskusi dengan kami.
                     </p>
                     <a 
                         href="/contact" 
-                        className="inline-flex items-center space-x-3 bg-white text-gray-900 px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 text-base font-medium shadow-xl"
+                        className="inline-flex items-center space-x-3 bg-white text-gray-800 px-8 py-4 rounded-lg hover:bg-gray-200 transition duration-300 text-base font-medium shadow-xl"
                     >
                         <span>Mulai Konsultasi Gratis</span>
                         <ArrowRight size={20} />
                     </a>
                 </div>
             </section>
-            <FaqSection/>
             <CtaSection/>
             <Footer/>
         </>

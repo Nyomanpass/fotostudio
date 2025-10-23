@@ -79,7 +79,7 @@ const PortfolioSection = () => {
     const displayedItems = portfolioData.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
     return (
-        <section id="portfolio" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section id="portfolio" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-36">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section */}

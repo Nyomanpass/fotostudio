@@ -6,12 +6,12 @@ const keunggulanData = [
     {
         icon: Users, // Mengganti ikon
         title: "Tim Ramah & Profesional",
-        description: "Kami memastikan setiap klien merasa nyaman dan mendapat pelayanan terbaik dari tim ahli yang berpengalaman."
+        description: "Kami memastikan setiap klien merasa nyaman dan mendapat pelayanan terbaik."
     },
     {
         icon: Camera, // Mengganti ikon
         title: "Berpengalaman",
-        description: "Tim fotografer dan videografer profesional dengan pengalaman bertahun-tahun di berbagai jenis acara."
+        description: "Tim fotografer dan videografer profesional dan bepengalaman."
     },
     {
         icon: Zap,
@@ -27,21 +27,23 @@ const keunggulanData = [
 
 const KeunggulanKamiSection = () => {
     return (
-        // Latar belakang Hitam/Abu-abu gelap pekat, Teks Putih
-        <section className="bg-gray-900 text-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        // Ganti Latar Belakang menjadi Abu Muda (bg-gray-100/200) & Text menjadi Gelap (text-gray-800)
+        <section className="bg-gray-400 text-gray-800 py-16 md:py-24 px-4 sm:px-6 lg:px-36"> 
             <div className="max-w-7xl mx-auto text-center">
                 
                 {/* Header Section */}
-                <h2 className="text-4xl md:text-5xl font-serif font-light text-white mb-2">
+                {/* Ganti warna teks header menjadi abu gelap pekat */}
+                <h2 className="text-4xl md:text-5xl font-serif font-light text-white mb-2"> 
                     Keunggulan Kami
                 </h2>
-                <p className="text-base font-light text-gray-400 mb-16">
+                {/* Ganti warna teks deskripsi menjadi abu-abu sedang */}
+                <p className="text-base font-light text-white mb-16"> 
                     Mengapa memilih DoniStudio?
                 </p>
 
-                {/* Grid Keunggulan (4 Kolom) */}
+                {/* Grid Keunggulan (4 Kolom) - INI YANG HARUS DIPERBAIKI */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-                    {keunggulanData.map((item, index) => (
+                    {keunggulanData.map((item, index) => ( // <--- KODE MAPPING INI HILANG
                         <KeunggulanCard 
                             key={index}
                             icon={item.icon}
@@ -56,24 +58,25 @@ const KeunggulanKamiSection = () => {
     );
 };
 
+
 // Komponen Kartu Keunggulan
 const KeunggulanCard = ({ icon, title, description }) => {
     const Icon = icon;
     return (
         <div className="flex flex-col items-center text-center">
             
-            {/* Ikon dengan Latar Belakang Gelap dan Aksen Emas */}
-            <div className="p-5 mb-6 rounded-full bg-gray-800 border-2 border-yellow-700 shadow-xl transition duration-300 hover:bg-gray-700">
-                {Icon ? <Icon className="w-8 h-8 text-yellow-500" /> : null}
+            {/* Ikon: Ganti Latar Belakang menjadi Putih/Abu muda (bg-white) */}
+            <div className="p-5 mb-6 rounded-full bg-white border-2 border-gray-300 shadow-xl transition duration-300 hover:bg-gray-50">
+                {Icon ? <Icon className="w-8 h-8 text-gray-600" /> : null} {/* Ubah aksen emas jadi yellow-600 */}
             </div>
 
-            {/* Judul */}
-            <h3 className="text-xl font-normal text-white mb-3">
+            {/* Judul: Ganti warna teks menjadi Abu Gelap Pekat */}
+            <h3 className="text-xl font-normal text-white mb-3"> 
                 {title}
             </h3>
 
-            {/* Deskripsi */}
-            <p className="text-sm font-light text-gray-400 leading-relaxed">
+            {/* Deskripsi: Ganti warna teks menjadi Abu Sedang */}
+            <p className="text-sm font-light text-gray-200 leading-relaxed"> 
                 {description}
             </p>
         </div>

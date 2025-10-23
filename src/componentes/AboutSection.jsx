@@ -7,7 +7,7 @@ const AboutSection = () => {
     const PROFILE_IMAGE = '/porto/porto2.jpg'; 
 
     return (
-        <section id="about" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section id="about" className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-36">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section (Sesuai gaya gambar) */}

@@ -27,13 +27,13 @@ const testimonialData = [
 const TestimonialSection = () => {
     return (
         // Latar belakang Hitam/Abu-abu gelap pekat, Teks Putih
-        <section className="bg-gray-900 py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-white">
+        <section className="bg-gray-400 py-16 md:py-24 px-4 sm:px-6 lg:px-36 text-white">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section */}
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-12">
                     <div>
-                        <p className="text-sm font-light uppercase tracking-widest text-gray-400">TESTIMONIALS</p>
+                        <p className="text-sm font-light uppercase tracking-widest text-white">TESTIMONIALS</p>
                         <h2 className="text-4xl md:text-4xl font-light text-white mt-1 mb-4">
                             WHAT MY CLIENTS SAY
                         </h2>
@@ -44,7 +44,7 @@ const TestimonialSection = () => {
                     <div className="flex items-center space-x-4 mt-8 sm:mt-0">
                         <a 
                             href="/testimonials" 
-                            className="flex items-center space-x-2 bg-gray-800 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
+                            className="flex items-center space-x-2 bg-white text-gray-800 px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
                         >
                             <span>View All Testimonials</span>
                             <ArrowRight size={16} />
@@ -81,14 +81,14 @@ const TestimonialCard = ({ name, location, review, rating }) => {
 
     return (
         // Kartu dengan Latar Belakang Abu-abu Gelap, Border, dan Shadow
-        <div className="bg-gray-800 border border-gray-700 p-6 rounded-xl shadow-lg flex flex-col justify-between">
+        <div className="bg-white p-6 rounded-xl shadow-lg flex flex-col justify-between">
             
             {/* Header Nama & Lokasi (Tidak ada lagi slot untuk ikon sosial media di kanan) */}
             <div className="text-left mb-4">
-                <h3 className="text-lg font-normal text-white mb-0.5">
+                <h3 className="text-lg font-normal text-gray-800 mb-0.5">
                     {name}
                 </h3>
-                <p className="text-xs font-light text-gray-400">
+                <p className="text-xs font-light text-gray-500">
                     {location}
                 </p>
             </div>
@@ -99,7 +99,7 @@ const TestimonialCard = ({ name, location, review, rating }) => {
             </div>
 
             {/* Isi Ulasan */}
-            <p className="text-base font-light text-gray-300 leading-relaxed">
+            <p className="text-base font-light text-gray-500 leading-relaxed">
                 {review}
             </p>
         </div>

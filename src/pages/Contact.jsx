@@ -1,22 +1,24 @@
 import React from 'react';
-import { Mail, Phone, Clock, MessageSquare } from 'lucide-react'; // Menggunakan MessageSquare untuk kontak non-fisik
+// PERBAIKAN: Tambahkan MapPin ke dalam impor Lucide React
+import { Mail, Phone, Clock, MessageSquare, MapPin } from 'lucide-react'; 
 import Navbar from '../componentes/Navbar';
 import Footer from '../componentes/Footer';
+import ContactHeader from '../componentes/contact/ContactHeader';
 
 // --- KOMPONEN PEMBANTU (Diletakkan di dalam file yang sama) ---
 
 // 1. Komponen Detail Kontak
 const ContactDetail = ({ Icon, title, value, link }) => (
     <div className="flex items-start space-x-4">
-        <Icon className="w-6 h-6 text-yellow-500 flex-shrink-0 mt-1" />
+        <Icon className="w-6 h-6 text-gray-800 flex-shrink-0 mt-1" />
         <div>
-            <p className="text-sm font-medium uppercase tracking-wider text-gray-400">{title}</p>
+            <p className="text-sm font-medium uppercase tracking-wider text-gray-800">{title}</p>
             {link ? (
-                <a href={link} className="text-lg font-light hover:text-yellow-500 transition duration-200">
+                <a href={link} className="text-md font-light text-gray-700 mt-2 hover:text-yellow-500 transition duration-200">
                     {value}
                 </a>
             ) : (
-                <p className="text-lg font-light">{value}</p>
+                <p className="text-md font-light text-gray-700">{value}</p>
             )}
         </div>
     </div>
@@ -77,51 +79,46 @@ const Contact = () => {
     return (
         <>
             <Navbar/>
+            <ContactHeader/>
             <div className="bg-white min-h-screen">
-
-                {/* Bagian 1: Header Halaman Kontak (Lebih Ringkas) */}
-                <section className="bg-gray-50 pt-36 pb-12 md:pb-16 px-4 text-center border-b border-gray-100">
-                    <div className="max-w-3xl mx-auto">
-                        <p className="text-sm font-medium uppercase tracking-widest text-gray-500 mb-2">HUBUNGI KAMI</p>
-                        <h1 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
-                            Wujudkan Visi Anda Bersama Kami
-                        </h1>
-                        <p className="text-base text-gray-600 max-w-xl mx-auto">
-                            Mari kita mulai percakapan. Tim profesional kami siap melayani kebutuhan visual Anda.
-                        </p>
-                    </div>
-                </section>
-
-                {/* Bagian 2: Formulir dan Detail Kontak (Dua Kolom Fokus) */}
-                <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
-                    {/* Menggunakan max-w-5xl agar konten lebih terpusat */}
-                    <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+               
+            <section className="py-20 md:py-28 px-4 sm:px-6 lg:px-8">
+               
+                <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+                    
+                    {/* Kolom Kiri: Informasi Kontak Alternatif (EFEK DARK MODE) */}
+                    <div className="order-2 lg:order-1 space-y-8 p-10 bg-gray-200 text-white rounded-xl shadow-2xl h-min"> 
                         
-                        {/* Kolom Kiri: Informasi Kontak Alternatif (Dibuat lebih menonjol) */}
-                        <div className="order-2 lg:order-1 space-y-8 p-8 bg-gray-900 text-white rounded-xl shadow-2xl h-min">
-                            <h3 className="text-3xl font-light mb-6">Detail Kontak</h3>
-                            
+                        <h3 className="text-4xl font-light mb-8 border-b border-gray-800 text-gray-800 pb-4">
+                            Detail Kontak
+                        </h3>
+                        
+                        <div className="space-y-8">
                             <ContactDetail Icon={Phone} title="Telepon & WhatsApp" value="+62 812-3456-7890" link="tel:+6281234567890" />
                             <ContactDetail Icon={Mail} title="Email Bisnis" value="halo@donistudio.com" link="mailto:halo@donistudio.com" />
-                            <ContactDetail Icon={MessageSquare} title="Virtual Office" value="Layanan Administrasi & Chat Aktif" />
+                            {/* MapPin sekarang sudah diimpor */}
+                            <ContactDetail Icon={MapPin} title="Kantor Virtual" value="Layanan Administrasi & Chat Aktif" /> 
                             <ContactDetail Icon={Clock} title="Jam Respon Cepat" value="Senin - Jumat, 09:00 - 17:00 WIB" />
-                            
-                            {/* CTA Kecil */}
-                            <div className="pt-4">
-                                <p className="text-sm font-light text-gray-400">Kami menjamin respon terbaik dan tercepat untuk setiap proyek.</p>
-                            </div>
-                        </div>
-
-                        {/* Kolom Kanan: Formulir Kontak (Lebih Besar) */}
-                        <div className="order-1 lg:order-2 p-0 bg-white rounded-xl h-min">
-                            <h3 className="text-3xl font-light text-gray-900 mb-8 border-b border-gray-100 pb-4">Kirim Pesan</h3>
-                            <ContactForm />
                         </div>
                         
+                        {/* CTA Kecil */}
+                        <div className="pt-6 border-t border-gray-700">
+                            <p className="text-sm font-light text-gray-400">Kami menjamin respon terbaik dan tercepat untuk setiap proyek.</p>
+                        </div>
                     </div>
-                </section>
+
+                    {/* Kolom Kanan: Formulir Kontak */}
+                    <div className="order-1 lg:order-2 p-10 bg-white rounded-xl shadow-xl border border-gray-100 h-min"> 
+                        <h3 className="text-4xl font-light text-gray-900 mb-8 border-b border-gray-100 pb-4">
+                            Kirim Pesan
+                        </h3>
+                        <ContactForm />
+                    </div>
+                    
+                </div>
+            </section>
                 
-            </div>
+        </div>
             <Footer/>
         </>
     );

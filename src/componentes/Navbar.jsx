@@ -45,25 +45,7 @@ function Navbar() {
       <nav className="bg-white shadow-lg fixed w-full z-50 backdrop-blur-sm transition-all duration-300">
         
         {/* TOP BAR YANG BISA HILANG */}
-        <div 
-          className={`bg-gray-900 text-gray-100 text-sm 
-            px-4 sm:px-6 md:px-12 lg:px-24 
-            flex justify-between items-center flex-wrap gap-2
-            transition-all duration-300 ease-in-out ${topBarClass}`
-          }
-        >
-          {/* Konten Kontak */}
-          <div className="flex items-center space-x-4 flex-wrap gap-2">
-            <span className="flex items-center gap-1"><Phone size={14}/> +62 812-3456-7890</span>
-            <span className="flex items-center gap-1"><Mail size={14}/> support@donystudio.com</span>
-          </div>
-
-          {/* Konten Sosial Media */}
-          <div className="flex items-center space-x-3">
-            <a href="#" className="hover:text-white"><Instagram size={16}/></a>
-            <a href="#" className="hover:text-white"><Facebook size={16}/></a>
-          </div>
-        </div>
+      
         {/* AKHIR TOP BAR */}
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

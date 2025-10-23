@@ -32,7 +32,7 @@ const processData = [
 const OurProcessSection = () => {
     return (
         // Latar belakang Putih, Teks Hitam
-        <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-36">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section */}
@@ -72,12 +72,9 @@ const ProcessCard = ({ step, icon, title, description }) => {
             
             {/* Nomor Langkah */}
             <div className="relative mb-6">
-                <span className="text-6xl font-extralight text-gray-200 block leading-none">0{step}</span>
-                {/* Ikon di Tengah Nomor */}
-                <div className="absolute inset-0 flex items-center justify-center p-2 rounded-full">
-                    <Icon className="w-6 h-6 text-gray-900" />
-                </div>
+                <span className="text-6xl font-extralight text-gray-400 block leading-none">0{step}</span>
             </div>
+            
             
             {/* Judul */}
             <h3 className="text-lg font-normal text-gray-900 mb-3">

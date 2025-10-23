@@ -146,7 +146,6 @@ function Home(){
             <AboutSection/>
             <ServiceSection/>
             <PortfolioSection/>
-            <FaqSection/>
             <TestimonialSection/>
             <CtaSection/>
             <Footer/>

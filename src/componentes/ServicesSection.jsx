@@ -96,13 +96,13 @@ const ServiceDetailSection = () => {
 
     return (
         // Latar belakang gelap (Dark Mode)
-        <section id="services" className="bg-gray-900 py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-white">
+        <section id="services" className="bg-gray-400 py-16 md:py-24 px-4 sm:px-6 lg:px-32 text-white">
             <div className="max-w-7xl mx-auto">
                 
                 {/* Header Section (Mirip Desain Gambar) */}
                 <div className="flex justify-between items-center mb-12 md:mb-16">
                     <div>
-                        <p className="text-sm font-light uppercase tracking-widest text-gray-400">SERVICES</p>
+                        <p className="text-sm font-light uppercase tracking-widest text-white">SERVICES</p>
                         <h2 className="text-4xl md:text-4xl font-light text-white mt-1">
                             MY PHOTOGRAPHY SERVICES
                         </h2>
@@ -114,22 +114,22 @@ const ServiceDetailSection = () => {
                         <div className="hidden sm:flex space-x-2">
                             <button 
                                 onClick={() => handleNavigation('prev')}
-                                className="p-3 rounded-full border border-gray-700 hover:bg-gray-800 transition duration-300"
+                                className="p-3 rounded-full border border-white hover:bg-gray-800 transition duration-300"
                             >
-                                <ChevronLeft className="w-5 h-5 text-gray-400" />
+                                <ChevronLeft className="w-5 h-5 text-white hover:text-gray-200" />
                             </button>
                             <button 
                                 onClick={() => handleNavigation('next')}
                                 className="p-3 rounded-full bg-white hover:bg-gray-200 transition duration-300"
                             >
-                                <ChevronRight className="w-5 h-5 text-gray-900" />
+                                <ChevronRight className="w-5 h-5 text-gray-800 hover:text-200" />
                             </button>
                         </div>
                         
                         {/* Tombol View All Services */}
                         <a 
                             href="/services" 
-                            className="flex items-center space-x-2 bg-gray-800 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
+                            className="flex items-center space-x-2 bg-white text-gray-800 px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition duration-300 text-sm font-light"
                         >
                             <span>View All Services</span>
                             <ArrowRight size={16} />
@@ -141,26 +141,26 @@ const ServiceDetailSection = () => {
                 <div className="flex flex-col lg:flex-row gap-12">
                     
                     {/* Kolom Kiri: Detail Teks (Interaktif) */}
-                    <div className="lg:w-1/2 space-y-8 p-6 bg-gray-800 rounded-xl shadow-2xl transition-all duration-500">
+                    <div className="lg:w-1/2 space-y-8 p-6 bg-gray-200 rounded-xl shadow-2xl transition-all duration-500">
                         
                         {/* Judul Layanan Aktif */}
                         <div className="flex items-center space-x-4 mb-6">
                             
-                            <h3 className="text-3xl font-light text-white">{activeService.title}</h3>
+                            <h3 className="text-3xl font-light text-gray-800">{activeService.title}</h3>
                         </div>
 
                         {/* Deskripsi */}
-                        <p className="text-base font-light text-gray-300 leading-relaxed mb-8">
+                        <p className="text-base font-light text-gray-700 leading-relaxed mb-8">
                             {activeService.description}
                         </p>
 
                         {/* Service Highlights */}
                         <div className="space-y-4">
-                            <p className="text-sm font-medium uppercase tracking-wider text-gray-400">Service Highlights</p>
+                            <p className="text-sm font-medium uppercase tracking-wider text-gray-800">Service Highlights</p>
                             {activeService.highlights.map((highlight, i) => (
-                                <div key={i} className="flex items-start space-x-3 p-4 bg-gray-700 rounded-lg shadow-md">
+                                <div key={i} className="flex items-start space-x-3 p-4 bg-white rounded-lg shadow-md">
                                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                                    <p className="text-base font-light text-gray-200">{highlight}</p>
+                                    <p className="text-base font-light text-gray-800">{highlight}</p>
                                 </div>
                             ))}
                         </div>
@@ -187,8 +187,8 @@ const ServiceDetailSection = () => {
                             onClick={() => setActiveIndex(index)}
                             className={`px-5 py-2 rounded-full text-sm font-medium transition duration-300 ${
                                 index === activeIndex 
-                                ? 'bg-white text-gray-900 shadow-lg' 
-                                : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+                                ? 'bg-gray-800 text-gray-200 hover:bg-gray-700'
+                                : 'bg-white text-gray-900 shadow-lg' 
                             }`}
                         >
                             {service.title}

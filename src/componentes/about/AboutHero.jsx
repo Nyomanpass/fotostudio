@@ -100,7 +100,7 @@ const AboutHero = () => {
 
     return (
         // Latar belakang Putih, Teks Hitam
-        <section className="bg-white text-gray-900 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <section className="bg-white text-gray-900 py-16 md:py-24 px-4 sm:px-6 lg:px-36">
             <div className="max-w-7xl mx-auto text-center">
                 
                 {/* 1. HEADER & JUDUL UTAMA */}
@@ -112,22 +112,7 @@ const AboutHero = () => {
                 </div>
 
                 {/* 2. STATISTIK (kotak kini center) */}
-                <div ref={containerRef} className="flex flex-wrap justify-center gap-4 md:gap-8 mb-16 md:mb-24">
-                    {statsData.map((stat, index) => (
-                        <div 
-                            key={index} 
-                            className="p-4 md:p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-md flex-shrink-0"
-                            style={{ minWidth: '150px' }}
-                        >
-                            <p className="text-3xl md:text-4xl font-light text-gray-900 mb-1">
-                                {displayed[index]}
-                            </p>
-                            <p className="text-sm font-light text-gray-600">
-                                {stat.label}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+              
 
                 {/* 3. FOTO PROFIL & SCROLL HINT */}
                 <div className="relative mb-2 md:mb-2">

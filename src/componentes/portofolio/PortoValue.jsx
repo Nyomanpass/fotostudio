@@ -6,17 +6,17 @@ import Footer from '../Footer';
 // Data Dummy Portofolio (Data tidak berubah)
 const portfolioData = [
     { id: 1, title: "Prewedding, Amanda & Rizky", category: "Prewedding", image: "/headertiga.jpg" },
-    { id: 2, title: "Wedding, Sarah & Bima", category: "Wedding", image: "/porto/porto1.jpg" },
+    { id: 2, title: "Wedding, Sarah & Bima", category: "Graduation", image: "/porto/porto1.jpg" },
     { id: 3, title: "Product Elegance", category: "Product", image: "/porto/porto2.jpg" },
     { id: 4, title: "Annual Corporate Gala", category: "Event", image: "/porto/porto3.jpg" },
     { id: 5, title: "Prewedding, Di Pantai", category: "Prewedding", image: "/porto/porto4.jpg" },
-    { id: 6, title: "Akad Nikah Intimate", category: "Wedding", image: "/porto/porto6.jpg" },
+    { id: 6, title: "Akad Nikah Intimate", category: "Graduation", image: "/porto/porto6.jpg" },
     { id: 7, title: "Produk Skincare", category: "Product", image: "/porto/porto7.jpg" },
     { id: 8, title: "Birthday Party 25th", category: "Event", image: "/porto/porto8.jpg" },
     { id: 9, title: "Prewedding, Bagus & Desak", category: "Prewedding", image: "/porto/porto9.jpg" },
 ];
 
-const categories = ["Semua", "Wedding", "Prewedding", "Engagement", "Event", "Product"];
+const categories = ["Semua", "Graduation", "Prewedding", "Engagement", "Event", "Product"];
 
 const PortoValue = () => {
     const [activeFilter, setActiveFilter] = useState("Semua");
@@ -41,10 +41,10 @@ const PortoValue = () => {
     return (
         // Latar Belakang Putih Diterapkan
         <>
-               <div className="bg-white min-h-screen text-gray-900">
+            <div className="bg-white min-h-screen text-gray-900">
 
             {/* Bagian 2: Filter dan Grid Galeri */}
-            <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
+            <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-36">
                 <div className="max-w-7xl mx-auto">
                     
                     {/* Judul Sekunder */}
@@ -61,8 +61,8 @@ const PortoValue = () => {
                                 onClick={() => setActiveFilter(category)}
                                 className={`px-6 py-2 rounded-lg text-sm font-medium transition duration-300 shadow-sm uppercase tracking-wider ${
                                     category === activeFilter 
-                                    ? 'bg-gray-900 text-white shadow-lg' 
-                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200' 
+                                    ? 'bg-gray-800 text-white shadow-lg' 
+                                    : 'bg-gray-200 text-gray-700 hover:bg-gray-200' 
                                 }`}
                             >
                                 {category}
